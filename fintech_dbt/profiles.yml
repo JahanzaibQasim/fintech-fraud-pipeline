@@ -1,0 +1,13 @@
+fintech_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: ecstatic-armor-506312-m7
+      dataset: fintech_dbt_dev
+      keyfile: /opt/airflow/gcp_keys.json   # <--- Must point to /opt/airflow/ inside Docker
+      threads: 4
+      timeout_seconds: 300
+      location: EU
+  target: dev

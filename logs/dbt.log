@@ -1,0 +1,100 @@
+[0m12:12:50.146184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025ADE6A1E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025ADBE0F250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AE0FBFB10>]}
+
+
+============================== 12:12:50.160627 | 2060b072-b7a7-4795-a950-21f7e4297efc ==============================
+[0m12:12:50.160627 [info ] [MainThread]: Running with dbt=1.12.3
+[0m12:12:50.162565 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Jahanzaib\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt init fintech_dbt', 'log_path': 'logs'}
+[0m12:12:50.264189 [debug] [MainThread]: Starter project path: D:\Python\venv\Lib\site-packages\dbt\include\starter_project
+[0m12:12:50.369795 [info ] [MainThread]: Setting up your profile.
+[0m12:14:29.228956 [info ] [MainThread]: Profile fintech_dbt written to C:\Users\Jahanzaib\.dbt\profiles.yml using target's profile_template.yml and your supplied values.
+[0m12:14:29.243672 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m12:14:29.245751 [info ] [MainThread]: dbt version: 1.12.3
+[0m12:14:29.247456 [info ] [MainThread]: python version: 3.14.0
+[0m12:14:29.248827 [info ] [MainThread]: python path: D:\Python\venv\Scripts\python.exe
+[0m12:14:29.250214 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m12:14:29.555481 [info ] [MainThread]: Using profiles dir at C:\Users\Jahanzaib\.dbt
+[0m12:14:29.564450 [info ] [MainThread]: Using profiles.yml file at C:\Users\Jahanzaib\.dbt\profiles.yml
+[0m12:14:29.603475 [info ] [MainThread]: Using dbt_project.yml file at D:\Python\DataEngineering\fintech_project\fintech_dbt\dbt_project.yml
+[0m12:14:29.612826 [info ] [MainThread]: adapter type: bigquery
+[0m12:14:29.615168 [info ] [MainThread]: adapter version: 1.12.0
+[0m12:14:30.020929 [info ] [MainThread]: Configuration:
+[0m12:14:30.022452 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:14:30.023427 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m12:14:30.024311 [info ] [MainThread]: Required dependencies:
+[0m12:14:30.025239 [debug] [MainThread]: Executing "git --help"
+[0m12:14:30.171056 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:14:30.172529 [debug] [MainThread]: STDERR: "b''"
+[0m12:14:30.173506 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:14:30.174439 [info ] [MainThread]: Connection:
+[0m12:14:30.175558 [info ] [MainThread]:   method: service-account
+[0m12:14:30.176495 [info ] [MainThread]:   database: ecstatic-armor-506312-m7
+[0m12:14:30.177635 [info ] [MainThread]:   execution_project: ecstatic-armor-506312-m7
+[0m12:14:30.179000 [info ] [MainThread]:   schema: fintech_raw_bronze
+[0m12:14:30.181113 [info ] [MainThread]:   location: EU
+[0m12:14:30.183349 [info ] [MainThread]:   priority: interactive
+[0m12:14:30.185130 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m12:14:30.186888 [info ] [MainThread]:   reservation: None
+[0m12:14:30.188715 [info ] [MainThread]:   impersonate_service_account: None
+[0m12:14:30.190073 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m12:14:30.191131 [info ] [MainThread]:   job_retries: 1
+[0m12:14:30.192467 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m12:14:30.201046 [info ] [MainThread]:   job_execution_timeout_seconds: 60
+[0m12:14:30.202287 [info ] [MainThread]:   job_link_info_level_log: False
+[0m12:14:30.203503 [info ] [MainThread]:   timeout_seconds: 60
+[0m12:14:30.205722 [info ] [MainThread]:   client_id: None
+[0m12:14:30.207742 [info ] [MainThread]:   token_uri: None
+[0m12:14:30.209987 [info ] [MainThread]:   compute_region: None
+[0m12:14:30.214729 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m12:14:30.217092 [info ] [MainThread]:   gcs_bucket: None
+[0m12:14:30.226245 [info ] [MainThread]:   dataproc_batch: None
+[0m12:14:30.238783 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m12:14:32.553628 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m12:14:32.554904 [debug] [MainThread]: On debug: select 1 as id
+[0m12:14:32.556219 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:14:36.751791 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=ecstatic-armor-506312-m7&j=bq:EU:4dbed341-5a17-4409-9a28-44b781306b75&page=queryresults
+[0m12:14:37.092584 [debug] [MainThread]: SQL status: OK in 0.339 seconds
+[0m12:14:45.400500 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m12:14:45.402272 [info ] [MainThread]: [32mAll checks passed![0m
+[0m12:14:45.403619 [info ] [MainThread]: Your new dbt project "fintech_dbt" was created!
+Initialized new project in D:\Python\DataEngineering\fintech_project\fintech_dbt\fintech_dbt
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:14:45.407184 [debug] [MainThread]: Command `dbt init` succeeded at 12:14:45.406697 after 116.09 seconds
+[0m12:14:45.408522 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:14:45.410051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AE0DEA650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AEF50BE30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AEF4C1F20>]}
+[0m12:14:45.412037 [debug] [MainThread]: Flushing usage events
+[0m12:14:48.304565 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:33:43.177152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022354565E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022351C83250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022356E7FB10>]}
+
+
+============================== 18:33:43.193658 | aea69e6a-02dc-41e9-95a7-574efdf2ad8f ==============================
+[0m18:33:43.193658 [info ] [MainThread]: Running with dbt=1.12.3
+[0m18:33:43.195988 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Jahanzaib\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt debug', 'log_path': 'logs'}
+[0m18:33:43.279988 [info ] [MainThread]: dbt version: 1.12.3
+[0m18:33:43.281714 [info ] [MainThread]: python version: 3.14.0
+[0m18:33:43.283144 [info ] [MainThread]: python path: D:\Python\venv\Scripts\python.exe
+[0m18:33:43.284423 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m18:33:52.242271 [info ] [MainThread]: Using profiles dir at C:\Users\Jahanzaib\.dbt
+[0m18:33:52.246688 [info ] [MainThread]: Using profiles.yml file at C:\Users\Jahanzaib\.dbt\profiles.yml
+[0m18:33:52.248089 [info ] [MainThread]: Using dbt_project.yml file at D:\Python\DataEngineering\fintech_project\dbt_project.yml
+[0m18:33:52.249738 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m18:33:52.254196 [debug] [MainThread]: Command `dbt debug` failed at 18:33:52.253637 after 9.85 seconds
+[0m18:33:52.255656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022365280E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223653303B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002236524DBF0>]}
+[0m18:33:52.257245 [debug] [MainThread]: Flushing usage events
+[0m18:33:54.448238 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,24 @@
+# GCP Service Account Keys
+*.json
+keys.json
+gcp-key.json
+service_account*.json
+
+# Environment Variables & Secrets
+.env
+*.env
+
+# Python Virtual Environments
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Local Airflow & dbt Artifacts
+airflow.db
+airflow.db-journal
+airflow.db-wal
+logs/
+target/
+dbt_packages/
+profiles.yml

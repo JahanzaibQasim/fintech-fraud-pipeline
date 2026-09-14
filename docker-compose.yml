@@ -1,0 +1,60 @@
+version: '3.7'
+name: fintech-streaming
+
+networks:
+  redpanda_net:
+    driver: bridge
+
+services:
+  redpanda:
+    image: docker.redpanda.com/redpandadata/redpanda:v24.1.1
+    container_name: redpanda_broker
+    command:
+      - redpanda start
+      - --kafka-addr internal://0.0.0.0:9092,external://0.0.0.0:19092
+      - --advertise-kafka-addr internal://redpanda:9092,external://localhost:19092
+      - --mode dev-container
+      - --smp 1
+      - --default-log-level=info
+    ports:
+      - "19092:19092"
+      - "18081:18081"
+      - "18082:18082"
+      - "19644:9644"
+    networks:
+      - redpanda_net
+
+  console:
+    image: docker.redpanda.com/redpandadata/console:v2.5.2
+    container_name: redpanda_console
+    networks:
+      - redpanda_net
+    entrypoint: /bin/sh
+    command: -c 'echo "$$CONSOLE_CONFIG_FILE" > /tmp/config.yml; /app/console'
+    environment:
+      CONFIG_FILEPATH: /tmp/config.yml
+      CONSOLE_CONFIG_FILE: |
+        kafka:
+          brokers: ["redpanda:9092"]
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redpanda
+
+  airflow-standalone:
+    image: apache/airflow:2.9.1-python3.10
+    container_name: fintech_airflow
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/airflow.db
+      - _AIRFLOW_WWW_USER_USERNAME=admin
+      - _AIRFLOW_WWW_USER_PASSWORD=admin123
+      # docker exec -it fintech_airflow cat /opt/airflow/standalone_admin_password.txt
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./fintech_dbt:/opt/airflow/fintech_dbt
+      - ./gcp_keys.json:/opt/airflow/gcp_keys.json
+    ports:
+      - "8081:8080"
+    command: standalone
