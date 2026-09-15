@@ -11,7 +11,7 @@ An end-to-end streaming data pipeline designed to ingest, transform, test, and v
 ---
 
 ## 📊 Live Dashboard
-- **Interactive Looker Studio Report:** [Insert your Shareable Link Here]
+- **Interactive Looker Studio Report:** https://datastudio.google.com/reporting/20949df3-f723-4d70-ac62-6c86e218d5cb
 
 ---
 
@@ -57,7 +57,7 @@ An end-to-end streaming data pipeline designed to ingest, transform, test, and v
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/fintech-fraud-pipeline.git](https://github.com/your-username/fintech-fraud-pipeline.git)
+   git clone https://github.com/JahanzaibQasim/fintech-fraud-pipeline
    cd fintech-fraud-pipeline
    ```
 
@@ -76,7 +76,7 @@ An end-to-end streaming data pipeline designed to ingest, transform, test, and v
    ```
 
 4. **Access UI Endpoints:**
-   - **Airflow Web UI:** `http://localhost:8081` (Credentials: `admin`/`admin`)
+   - **Airflow Web UI:** `http://localhost:8081`
    - **Redpanda Console:** `http://localhost:8080`
 
 ---
