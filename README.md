@@ -17,15 +17,7 @@ An end-to-end streaming data pipeline designed to ingest, transform, test, and v
 
 ## 🏗️ Architecture & Medallion Design
 
-```text
-[Transaction Producer] ---> [Redpanda Streaming] ---> [Python Consumer]
-                                                            |
-                                                            v
-[Looker Studio] <--- [dbt Gold/Silver Models] <--- [BigQuery Bronze]
-                             ^
-                             |
-                   [Airflow Orchestrator]
-```
+![image](https://github.com/JahanzaibQasim/fintech-fraud-pipeline/blob/11d7d9d4be2bf94454ff70cbca82ba8e547a9877/Fintech-pipeline.jpg)
 
 ### Data Layer Design (Medallion Architecture)
 - **Bronze (Raw):** Streamed transactions ingested directly from Redpanda into Google BigQuery as append-only raw JSON logs.
